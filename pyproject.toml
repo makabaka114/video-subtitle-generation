@@ -1,0 +1,18 @@
+[project]
+name = "offline-subtitle-tool"
+version = "0.1.0"
+description = "Windows 本地离线视频字幕工具"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "faster-whisper>=1.2.1,<2",
+  "argostranslate>=1.11.0,<2",
+  "pyinstaller>=6.20.0,<7",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["app", "app.services", "app.ui", "vendor", "vendor.ctranslate2", "vendor.ctranslate2.models"]
